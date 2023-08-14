@@ -8,75 +8,81 @@
 </head>
 <body class="bg-gray-300 ">
 
-    <section id="head" class="border-b-gray-400 border-2 bg-white">
-        <nav  class="container mx-auto flex h-28 items-center justify-between">
+    <div>
+        <section id="head" class="border-b-gray-400 border-2 bg-white">
+            <nav  class="container mx-auto flex h-28 items-center justify-between">
+                <div>
+                    <h1 class="font-serif text-5xl font-bold">library</h1>
+                </div>
+                <div>
+                    <button class="font-sans text-2xl border-2 p-2 px-4 rounded-lg bg-gray-100 border-transparent"> Log in</button>
+                </div>
+            </nav>
+        </section>
+    
+        <section id="add" class="container flex items-center justify-center mx-auto">
             <div>
-                <h1 class="font-serif text-5xl font-bold">library</h1>
+                <button class="my-14 text-3xl font-bold js-button">+ Add Book </button>
             </div>
-            <div>
-                <button class="font-sans text-2xl border-2 p-2 px-4 rounded-lg bg-gray-100 border-transparent"> Log in</button>
+        </section>
+    
+        
+    
+        <section id="content" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
+                    <div class="text-2xl font-semibold pt-5">"Harry"</div>
+                    <div class="text-2xl font-semibold"> Potter</div>
+                    <div class="text-2xl font-semibold"> 2 Pages</div>
+                    <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
+                    <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
+                </div>
             </div>
-        </nav>
-    </section>
-
-    <section id="add" class="container flex items-center justify-center mx-auto">
-        <div>
-            <button class="my-14 text-3xl font-bold js-button">+ Add Book </button>
-        </div>
-    </section>
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
+                    <div class="text-2xl font-semibold pt-5">"Harry"</div>
+                    <div class="text-2xl font-semibold"> Potter</div>
+                    <div class="text-2xl font-semibold"> 2 Pages</div>
+                    <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
+                    <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
+                    <div class="text-2xl font-semibold pt-5">"Harry"</div>
+                    <div class="text-2xl font-semibold"> Potter</div>
+                    <div class="text-2xl font-semibold"> 2 Pages</div>
+                    <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
+                    <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="footer" class="absolute inset-x-0 bottom-0">
+            <div class="container mx-auto flex items-center justify-center text-xl pb-3">
+                Copyright &#169; 2023 yunjin08
+            </div>
+        </section>
+    </div>
 
     <!--Popup Bar Menu when Clicking the Add book Button-->
-    <form id="popup" class="absolute flex-col rounded-xl border-4 space-y-5 bg-gray-200 w-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
-        <h1 class="flex items-center justify-center mt-8 mb-2 text-3xl font-bold">
-            Add New Book
-        </h1>
-        <div class="flex justify-center"><input type="text" placeholder="Title" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
-        <div class="flex justify-center"><input type="text" placeholder="Author" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
-        <div class="flex justify-center"><input type="text" placeholder="Pages" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
-        <div class="flex items-center justify-center">
-            <p class="text-xl font-medium py-2"> Have you read it?</p>
-            <div class="pt-1 pl-1"><input type="checkbox" value="Yes" id="readBook"></div>
-        </div>
-        <div class="flex items-center justify-center"> 
-            <button class="mb-6 bg-green-300 w-72 rounded-md py-3 text-xl font-medium"> Submit </button>
-        </div>
-    </form>
-
-    <section id="content" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3">
-        <div class="flex flex-col items-center justify-center">
-            <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
-                <div class="text-2xl font-semibold pt-5">"Harry"</div>
-                <div class="text-2xl font-semibold"> Potter</div>
-                <div class="text-2xl font-semibold"> 2 Pages</div>
-                <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
-                <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
+    <div id="overlay" class="absolute h-100% w-100% inset-0 bg-black bg-opacity-80  hidden">
+        <form id="popup" class="absolute flex-col rounded-xl border-4 space-y-5 bg-gray-200 w-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
+            <h1 class="flex items-center justify-center mt-8 mb-2 text-3xl font-bold">
+                Add New Book
+            </h1>
+            <div class="flex justify-center"><input type="text" placeholder="Title" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
+            <div class="flex justify-center"><input type="text" placeholder="Author" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
+            <div class="flex justify-center"><input type="text" placeholder="Pages" class="text-2xl py-1 pl-1 rounded-md w-72"></div>
+            <div class="flex items-center justify-center">
+                <p class="text-xl font-medium py-2"> Have you read it?</p>
+                <div class="pt-1 pl-1"><input type="checkbox" value="Yes" id="readBook"></div>
             </div>
-        </div>
-        <div class="flex flex-col items-center justify-center">
-            <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
-                <div class="text-2xl font-semibold pt-5">"Harry"</div>
-                <div class="text-2xl font-semibold"> Potter</div>
-                <div class="text-2xl font-semibold"> 2 Pages</div>
-                <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
-                <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
+            <div class="flex items-center justify-center"> 
+                <button class="mb-6 bg-green-300 w-72 rounded-md py-3 text-xl font-medium"> Submit </button>
             </div>
-        </div>
-        <div class="flex flex-col items-center justify-center">
-            <div class="flex flex-col items-center justify-center bg-white space-y-4 mt-4 rounded-lg">
-                <div class="text-2xl font-semibold pt-5">"Harry"</div>
-                <div class="text-2xl font-semibold"> Potter</div>
-                <div class="text-2xl font-semibold"> 2 Pages</div>
-                <div class="px-6"><button class="bg-green-300 w-22rem text-2xl font-medium rounded-md py-4">Read</button></div>
-                <div class="pb-5 px-6"><button class="bg-gray-300 w-22rem text-2xl font-medium rounded-md py-4">Remove</button></div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="footer" class="absolute inset-x-0 bottom-0">
-        <div class="container mx-auto flex items-center justify-center text-xl pb-3">
-            Copyright &#169; 2023 yunjin08
-        </div>
-    </section>
+        </form>
+    </div>
     
     <script src="script.js"></script>
 </body>
