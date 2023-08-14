@@ -8,7 +8,11 @@ module.exports = {
       lg: '976px',
       xl: '1300px'
     },
-    extend: {},
+    extend: {
+      width: {
+        '22rem': '22rem',
+      },
+    },
   },
   plugins: [],
 }
