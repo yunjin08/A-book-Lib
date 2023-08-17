@@ -29,11 +29,7 @@ function Book(title,author,page, checkBox){
 }
 
 Book.prototype.info = function (){
-    if (this.readInfo = true){
-        return true;
-    } else{
-        false;
-    }
+    this.checkBox = !this.checkBox;
 };
 
 jsSubmitElement.addEventListener('click', () => {
@@ -87,7 +83,7 @@ function removeBook(index) {
 
 
 function isRead(index) {
-    bookInfo[index].checkBox = !bookInfo[index].checkBox; // Toggle the value
+    bookInfo[index].info(); // Toggle the value
     printHTML(); // Update the content
 };
 
